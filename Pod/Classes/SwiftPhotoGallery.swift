@@ -108,8 +108,12 @@ public class SwiftPhotoGallery: UIViewController {
         }
     }
 
-    private var pageBeforeRotation: Int = 0 {
+    private var pageBeforeRotation: Int {
         get {
+            if pageBeforeRotation == nil {
+                retun 0
+            }
+            
             if pageBeforeRotation < 0 {
                 return 0
             }
