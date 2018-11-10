@@ -109,6 +109,11 @@ public class SwiftPhotoGallery: UIViewController {
     private var needsLayout = true
 
     // MARK: Public Interface
+    public func setRevolvingCarouselEnabled(_ value: Bool) {
+        isRevolvingCarouselEnabled = value
+    }
+    
+    
     public init(delegate: SwiftPhotoGalleryDelegate, dataSource: SwiftPhotoGalleryDataSource) {
         super.init(nibName: nil, bundle: nil)
 
