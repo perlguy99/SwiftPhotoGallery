@@ -75,7 +75,11 @@ public class SwiftPhotoGallery: UIViewController {
         get {
             if isRevolvingCarouselEnabled {
                 pageBeforeRotation = Int(imageCollectionView.contentOffset.x / imageCollectionView.frame.size.width) - 1
-                return Int(imageCollectionView.contentOffset.x / imageCollectionView.frame.size.width) - 1
+                if pageBeforeRotation < 0 {
+                    pageBeforeRotation = 0
+                }
+                return pageBeforeRotation
+//                return Int(imageCollectionView.contentOffset.x / imageCollectionView.frame.size.width) - 1
             } else {
                 pageBeforeRotation = Int(imageCollectionView.contentOffset.x / imageCollectionView.frame.size.width)
                 return Int(imageCollectionView.contentOffset.x / imageCollectionView.frame.size.width)
