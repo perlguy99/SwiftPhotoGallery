@@ -98,7 +98,7 @@ public class SwiftPhotoGallery: UIViewController {
     #endif
 
     public var isSwipeToDismissEnabled: Bool = true
-    public var isRevolvingCarouselEnabled: Bool = true
+    public var isRevolvingCarouselEnabled: Bool = false
 
     private var pageBeforeRotation: Int = 0
     private var currentIndexPath: IndexPath = IndexPath(item: 0, section: 0)
@@ -109,10 +109,6 @@ public class SwiftPhotoGallery: UIViewController {
     private var needsLayout = true
 
     // MARK: Public Interface
-    public func setRevolvingCarouselEnabled(_ value: Bool) {
-        isRevolvingCarouselEnabled = value
-    }
-    
     public init(delegate: SwiftPhotoGalleryDelegate, dataSource: SwiftPhotoGalleryDataSource) {
         super.init(nibName: nil, bundle: nil)
 
