@@ -108,7 +108,18 @@ public class SwiftPhotoGallery: UIViewController {
         }
     }
 
-    private var pageBeforeRotation: Int = 0
+    private var pageBeforeRotation: Int = 0 {
+        get {
+            if pageBeforeRotation < 0 {
+                return 0
+            }
+            else {
+                return pageBeforeRotation
+            }
+        }
+        
+    }
+    
     private var currentIndexPath: IndexPath = IndexPath(item: 0, section: 0)
     private var flowLayout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
     fileprivate var pageControl: UIPageControl = UIPageControl()
