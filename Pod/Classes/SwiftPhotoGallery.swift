@@ -98,7 +98,12 @@ public class SwiftPhotoGallery: UIViewController {
     #endif
 
     public var isSwipeToDismissEnabled: Bool = true
-    public var isRevolvingCarouselEnabled: Bool = false
+    public var isRevolvingCarouselEnabled: Bool = false {
+        didSet {
+            print("\n\n\nValue was just changed!\n\n\n")
+        }
+    }
+
 
     private var pageBeforeRotation: Int = 0
     private var currentIndexPath: IndexPath = IndexPath(item: 0, section: 0)
