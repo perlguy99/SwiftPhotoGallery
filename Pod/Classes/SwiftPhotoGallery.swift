@@ -155,7 +155,7 @@ public class SwiftPhotoGallery: UIViewController {
                 scrollToImage(withIndex: pageBeforeRotation, animated: false)
             }
 
-            imageCollectionView.reloadItems(at: [desiredIndexPath])
+//            imageCollectionView.reloadItems(at: [desiredIndexPath])
 
             for cell in imageCollectionView.visibleCells {
                 if let cell = cell as? SwiftPhotoGalleryCell {
